@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIOS BASICOS</title>
+  </head>
+  <body>
+    <h1>EJERCICIOS BASICOS</h1>
+    <script>
+      // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+      function uno(c) {
+        if (typeof c != "string") {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          return console.log(`La longitud de la cadena es: ${c.length}`);
+        }
+      }
+      uno("Hola mundo");
+      // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+      const e2 = (c2, n) => {
+        if (typeof c2 != "string") {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          if (n > 0 && typeof n === "number") {
+            return console.log(`${c2.substr(0, n)}`);
+          } else {
+            return console.log("El numero no es valido");
+          }
+        }
+      };
+      e2("Hola Mundo", 10);
+      // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+      const e3 = (c, s) => {
+        if (typeof c != "string" && !c) {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          let array = c.split(s);
+          return console.log(array);
+        }
+      };
+      e3("hola que tal", " ");
+      // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+      const e4 = (c, n) => {
+        if (typeof c != "string" && !c) {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          if (n > 0 && typeof n === "number") {
+            for (i = 0; i < n; i++) {
+              console.log(c);
+            }
+          } else {
+            console.log("ingresa un numero valido");
+          }
+        }
+      };
+      e4("hola que tal", 3);
+    </script>
+  </body>
+</html>
