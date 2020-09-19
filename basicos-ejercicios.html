@@ -55,6 +55,65 @@
         }
       };
       e4("hola que tal", 3);
+      //5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+      const e5 = (c) => {
+        if (typeof c != "string" || !c) {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          let nuevo = "";
+          for (let i = c.length; i >= 0; i--) {
+            nuevo += c.charAt(i);
+          }
+          console.log(nuevo);
+        }
+      };
+      e5("Hola Mundo");
+      // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+      const e6 = (c, r) => {
+        if (typeof c != "string" || !c || typeof r != "string" || !r) {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          let array = c.split(" ");
+          let cont = 0;
+          for (let i in array) {
+            if (array[i] === r) {
+              cont++;
+            }
+          }
+          console.log(cont);
+        }
+      };
+      e6("hola mundo adios mundo mundo", "mundo");
+      // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+      const e7 = (c) => {
+        if (typeof c != "string" || !c) {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          let pal = c.replace(/ /g, "");
+          pal = pal.toLocaleLowerCase();
+          console.log(pal);
+          let palr = "";
+          for (let i = pal.length; i >= 0; i--) {
+            palr += pal.charAt(i);
+          }
+          console.log(palr);
+          if (pal === palr) {
+            console.log(true);
+          } else {
+            console.log(false);
+          }
+        }
+      };
+      e7("anita lava la tina");
+      // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+      const e8 = (c, p) => {
+        if (typeof c != "string" || !c || typeof p != "string" || !p) {
+          console.log("El valor ingresado no es una cadena");
+        } else {
+          console.log(c.replace(new RegExp(p, "g"), ""));
+        }
+      };
+      e8("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
     </script>
   </body>
 </html>
